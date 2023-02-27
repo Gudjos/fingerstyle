@@ -1,0 +1,39 @@
+<!-- basic html consisting of a list to be made into navbar and 6 content elements to be modified using css grid.
+Also links to 2 other HTML pages -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Finger:Style</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body onload="checkbookMarks()">
+    <main class="container">
+      <div id="nav">
+        <ul>
+          <li><a href="index.html">Finger:Style</a></li>
+          <li><a href="courses.html">COURSES</a></li>
+          <li><a href="requests.html">REQUESTS</a></li>
+          <li><a href="reviews.html">REVIEWS</a></li>
+          <li><a href="bookmarks.html">BOOKMARKS</a></li>
+        </ul>
+      </div>
+      <div id="main">
+          <button onClick="bookmark(this)" class="bookmark"></button><button onClick="likeDiv(this)" class="like"></button><p><span><a href="https://www.thomann.de/gb/steel_string_acoustic_guitars.html">Fingerstyle Guitars</a></span></p>
+      </div>
+      <div id="sidebar">
+          <blockquote>"Finger:Style taught me how to play my husband's favourite song! I played it for his birthday! He loved it!"</blockquote>
+      </div>
+      <div id="content1">
+          <button onClick="bookmark(this)" class="bookmark"></button><button onClick="likeDiv(this)" class="like"></button><p><span><a href="https://classicalguitarshed.com/sm-js-bach/">Classical Tab</a></span></p></div>
+      <div id="content2">
+          <button onClick="bookmark(this)" class="bookmark"></button><button onClick="likeDiv(this)" class="like"></button><p><span><a href="https://www.guitarnick.com/the-beatles-guitar-tab.html">Beatles Tab</a></span></p></div>
+      <div id="content3">
+          <button onClick="bookmark(this)" class="bookmark"></button><button onClick="likeDiv(this)" class="like"></button><p><span><a href="https://www.fingerstyle-guitar-today.com/three-little-birds-fingerstyle-guitar-tab.html">Bob Marley Tab</a></span></p>
+      </div>
+      <footer><p>©BetterTheDev 2023</p></footer>   
+      <script src="../JS/index.js"></script>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,280 @@
+/*using grid allows this website to be responsive. breakpoint at 799 width stacks all cells atop eachother for smaller screens*/
+
+/*general settings */
+body{
+  margin: 0;
+  background-image: url(../images/background.jpeg);
+  font-family: monospace;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+/*setting grid and cell arrangement*/
+.container  {
+   display: grid;
+   height: 100vh;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-rows: 0.3fr 1.5fr 1.2fr 0.2fr;
+   gap: 0.5vw;
+}
+
+/*styling navbar and links with h0ver effect*/
+#nav{
+  display: flex;
+  grid-column: 1/5;
+  border-radius: 15px;
+  justify-content:center; 
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+li  {
+  display: inline;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.5vw;
+  margin : 0 0.5vw 0 0.5vw;
+  font-size: 1.5vw;
+  border-radius: 10px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+span:hover, a:hover ,li:hover  {
+  background-color: white;
+  color: rgba(0, 0, 0, 0.7);
+}
+/*styling content divs*/
+#main {
+  border-radius: 15px;
+  background-color: aqua;
+  grid-column: 2/5;
+  background-image: url('../images/guitars.jpeg');
+  background-position: bottom;
+}
+span {
+  padding: 0.2vw;
+  color: white;
+  font-size: 1.4vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+#sidebar  {
+  grid-row: 2/5;
+  border-radius: 15px;
+  background-image: url('../images/beach.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  text-align: center;
+}
+blockquote {
+  padding: 0.1vw;
+  color: white;
+  font-size: 1.2vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  line-height: 4vw;
+  font-style: italic;
+}
+#content1 {
+  background-color: rgb(52, 135, 41);
+  border-radius: 15px;
+  background-image: url('../images/classical.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+#content2 {
+  background-color: rgb(24, 5, 5);
+  border-radius: 15px;
+  background-image: url('../images/beatles.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#content3 {
+  background-color: rgb(196, 181, 181);
+  border-radius: 15px;
+  background-image: url('../images/marley.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+footer {
+  background-color: white;
+  color: black;
+  border-radius: 15px;
+  grid-column: 2/5;
+  grid-row: 5;
+  margin: auto;
+}
+/*Styling like button*/
+
+.like {  
+  position: relative;
+  display: inline-block;
+  padding: 8px 8px;
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  background-image: url(../images/like.png);
+  background-color: antiquewhite;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  text-indent: -9999px; /* hide the text */
+  width: 30px;
+  height: 30px;
+}
+.liked {
+background-image: url(../images/liked.png);
+}  
+
+/*styling bookmarks*/
+.bookmark{ 
+  position: relative;
+  display: inline-block;
+  padding: 8px 8px;
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  background-image: url(../images/bookmark.png);
+  background-color: antiquewhite;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  text-indent: -9999px; /* hide the text */
+  width: 30px;
+  height: 30px;
+}
+.bookmarked{
+background-image: url(../images/bookmarked.png);
+} 
+/*creating table for course page*/
+#table {
+  width: auto;
+  grid-column: 2/5;
+}
+th  {
+  font-size: 30px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  line-height: 35px;
+}
+
+td{
+  font-size: 25px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  line-height: 35px;
+}
+/*creating form for request page*/
+#form{
+  grid-column: 2/4;
+}
+label {
+  background-color: black;
+  color: white;
+  display: inline;
+  font-size: 1.4vw;
+}
+#submit {
+  display: inline;
+  font-size: 2vw;
+}
+input, #message {
+    width: 50vw;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+#review {
+  width: 50vw;
+  height: 15vw;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+#feedback {
+  grid-column: 2;
+}
+.revStyle {
+  margin: 1em;
+  padding: 1em;
+  border: 1em;
+  background-color: antiquewhite;
+  color: black;
+}
+
+/*making it mobile friendly*/
+@media only screen and (max-width: 799px){
+  .container{
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 1.5fr 2fr 1fr 1fr 1fr 0.2fr;
+  }
+  #nav{
+    grid-column: 1;
+    grid-row: 1;
+  }
+  #sidebar  {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  #main {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  #content1 {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  #content2 {
+    grid-column: 1;
+    grid-row: 5;
+  }
+  
+  #content3 {
+    grid-column: 1;
+    grid-row: 6;
+  }
+  footer {
+    grid-column: 1;
+    grid-row: 7;
+  }
+  span, a , li, blockquote  {
+    font-size: 3vw;
+  }
+  #table  {
+    grid-column: 1;
+  }
+  #form  {
+    grid-column: 1;
+  }
+  label {
+    font-size: 15px;
+  }
+  #submit {
+    font-size: 15px;
+  }
+  input, #message {
+    width: 100%;
+    padding: 12px 5px;
+    margin: 5px 0;
+    box-sizing: border-box;
+  }
+}

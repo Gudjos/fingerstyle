@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Finger:Style</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <main class="container">
+      <div id="nav">
+        <ul>
+          <li><a href="index.html">Finger:Style</a></li>
+          <li><a href="courses.html">COURSES</a></li>
+          <li><a href="requests.html">REQUESTS</a></li>
+          <li><a href="reviews.html">REVIEWS</a></li>
+          <li><a href="bookmarks.html">BOOKMARKS</a></li>
+        </ul>
+      </div>
+      <div id="sidebar"><blockquote>Finger:Style don't only offer courses. If there is a song you would like tab for, we can create
+        one; making it as complex or simple as you feel comfortable with. We also offer tailored video lessons.</blockquote></div>
+      <div id="form">
+        <form>
+          <label for="first-name">First name:</label>
+          <input type="text" id="first-name"><br>
+          <label for="last-name">Last name:</label>
+          <input type="text" id="last-name"><br> 
+          <label for="email">Email</label>
+          <input type="email" id="email"><br>
+          <label for="phone">Phone no.</label>
+          <input type="tel" id="phone"><br>
+          <label for="course">Course</label>
+          <input type="radio" name="interest" id="course">
+          <label for="video">Video</label>
+          <input type="radio" name="interest" id="video">
+          <label for="tab">Tab</label>
+          <input type="radio" name="interest" id="tab"><br>
+          <label for="message">Please outline request</label>
+          <textarea id="message"></textarea><br>
+          <input id="submit" type="submit" value="Submit" onclick="sendReq()"> 
+        </form>
+      </div>
+      <footer><p>©BetterTheDev 2023</p></footer>
+      <script src="../JS/index.js"></script>   
+    </main>
+  </body>
+</html>
